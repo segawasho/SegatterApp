@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media(min-width:961px){
+
 /* /users/index ユーザ一覧ページ */
 .users-heading {
   font-weight: 300;
@@ -142,4 +144,6 @@
     right: 0;
     top: 0;
     cursor:default;
+}
+
 }
