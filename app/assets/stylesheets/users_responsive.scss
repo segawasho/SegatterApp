@@ -1,0 +1,54 @@
+@media(max-width:960px){
+
+    /* users#show ユーザ詳細ページ */
+
+  .user-right {
+    width: 90%;
+    padding-left:10px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+@media(max-width:560px){
+
+
+
+  /*user#index  ユーザ一覧ページ*/
+
+  .users-heading {
+    margin: 60px 0 20px;
+    font-size: 25px;
+  }
+
+  .users-index-item {
+    padding: 10px 5px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+    display: table;
+    width: 100%;
+  }
+
+  /* users#show ユーザ詳細ページ */
+
+  .user h2 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .user p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+
+  .user a {
+    font-size:14px;
+    padding:7px;
+    font-weight: 200;
+  }
+
+}

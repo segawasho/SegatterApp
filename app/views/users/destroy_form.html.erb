@@ -1,0 +1,15 @@
+<div class="main users-new">
+  <div class="container">
+    <h1 class="form-heading">確認</h1>
+      <div class="form users-form">
+        <div class="form-body">
+
+          <h2 class="destroy-confirm">※本当に退会しますか？</h2>
+          <div class="user destroy-btn">
+            <%= link_to("アカウント削除", "/users/#{@current_user.id}/destroy", {method: "post"}) %>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>

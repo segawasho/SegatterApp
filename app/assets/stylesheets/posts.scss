@@ -1,0 +1,122 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 共通レイアウト */
+
+
+
+/* /posts/index 投稿一覧ページ*/
+
+.posts-index-item {
+  padding: 15px 15px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.post-user-name a {
+  font-weight: 600;
+}
+
+
+.post-left {
+  float: left;
+}
+
+.post-right{
+  padding-left: 70px;
+}
+
+.post-likes{
+  float:right;
+}
+
+
+/* posts#show 投稿詳細ページ */
+
+.posts-show-item{
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: auto;
+  padding:20px 15px;
+}
+
+.posts-show-item p{
+  color:#222222;
+  font-size: 20px;
+  padding:20px;
+}
+
+.post-time{
+  color:#808080;
+  font-size: 15px;
+}
+
+.post-menus{
+  float:right;
+}
+
+.post-menus a{
+  font-size:20px;
+  padding:0px 20px;
+}
+
+.post-menus a:link, .post-menus a:visited{
+  color:#333333	;
+  cursor: pointer;
+}
+
+.posts-show-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.posts-show-item .post-user-name a {
+  vertical-align: middle;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.like-btn {
+  color: #8899a6;
+}
+
+.like-btn-unlike {
+  color: #ff2581;
+}
+
+.posts-show-item .fa {
+  font-size: 30px;
+  margin-right: 3px;
+}
+
+.likes-count{
+  display:inline-block;
+  color:#555555;
+  font-size:20px;
+  line-height: 30px;
+  padding-left:5px;
+}
+
+
+
+/* /posts/new 新規投稿ページ */
+
+.posts-new textarea {
+  font-size: 20px;
+  min-height: 140px;
+  border: 1px solid rgb(216, 218, 223);
+}
