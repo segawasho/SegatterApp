@@ -68,4 +68,4 @@ group :production do
   gem 'pg'
 end
 
-gem 'kaminari'
+gem 'kaminari', '~> 0.17.0'
