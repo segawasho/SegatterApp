@@ -64,14 +64,6 @@ class UsersController < ApplicationController
 
     def destroy
       @user = User.find_by(id: @current_user.id)
-      @posts = Post.where(user_id: @user.id)
-      @likes = Like.where(user_id: @user.id)
-      if @likes
-        @likes.destroy_all
-      end
-      if @posts
-        @posts.destroy_all
-      end
       @user.destroy
       flash[:notice] = "ありがとうございました。またいつか使ってください。"
       redirect_to("/")
