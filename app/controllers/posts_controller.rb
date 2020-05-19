@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
 
   def index
-    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(5)
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(6)
   end
 
   def show
@@ -46,6 +46,10 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find_by(id: params[:id])
+    @likes = Like.where(post_id: @post.id)
+    if @likes
+      @likes.destroy_all
+    end
     @post.destroy
     flash[:notice] = "削除しました"
     redirect_to("/posts/index")

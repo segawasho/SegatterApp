@@ -30,6 +30,8 @@
       </div>
     <% end %>
 
+    <%= paginate @likes %>
+
     <div class="user destroy-btn">
       <% if @user.id == @current_user.id %>
         <%= link_to("アカウント削除", "/users/#{@user.id}/destroy_form") %>

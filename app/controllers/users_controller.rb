@@ -10,11 +10,12 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find_by(id: params[:id])
+      @posts = Post.where(user_id: params[:id]).order(created_at: :desc).page(params[:page]).per(4)
     end
 
     def likes
       @user = User.find_by(id: params[:id])
-      @likes = Like.where(user_id: @user.id)
+      @likes = Like.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(4)
     end
 
     def new

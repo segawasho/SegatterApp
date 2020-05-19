@@ -14,7 +14,7 @@
       <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
     </ul>
 
-    <% @user.posts.each do |post| %>
+    <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-left">
           <img src="<%= "/user_images/#{post.user.image_name}" %>">
@@ -27,6 +27,9 @@
         </div>
       </div>
     <% end %>
+
+    <%= paginate @posts %>
+
 
     <div class="user destroy-btn">
       <% if @user.id == @current_user.id %>
