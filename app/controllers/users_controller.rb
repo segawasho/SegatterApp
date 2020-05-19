@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     before_action :ensure_correct_user, {only: [:edit, :update]}
 
     def index
-      @users = User.all.order(created_at: :desc)
+      @users = User.all.order(created_at: :desc).page(params[:page]).per(5)
     end
 
     def show
