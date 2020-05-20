@@ -5,9 +5,15 @@
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
       <% if @user.id == @current_user.id %>
-        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("編集", "/users/#{@user.id}/edit", {class: "user-edit-btn"}) %>
+      <% end %>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("アカウント削除", "/users/#{@user.id}/destroy_form") %>
       <% end %>
     </div>
+
+
+
 
     <ul class="user-tabs">
       <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
@@ -63,15 +69,10 @@
 
     <%= paginate @likes %>
 
-    <div class="user destroy-btn">
-      <% if @user.id == @current_user.id %>
-        <%= link_to("アカウント削除", "/users/#{@user.id}/destroy_form") %>
-      <% end %>
-    </div>
 
 
 
-    <div class="user return-btn">
+    <div class="return return-btn">
       <%= link_to("戻る", "/posts/index") %>
     </div>
 

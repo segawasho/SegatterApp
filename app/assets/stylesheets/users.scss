@@ -54,6 +54,14 @@
   margin-bottom: 5px;
   text-align: center;
   color: #555555;
+  background-color: rgba(0,128,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  padding:20px 0px;
+}
+
+.user .user-edit-btn{
+  padding: 10px 50px;
 }
 
 .destroy-btn{
@@ -62,6 +70,20 @@
 
 .return-btn{
   margin-top:40px;
+}
+
+.return{
+  margin-bottom: 5px;
+  text-align: center;
+  color: #555555;
+}
+
+.return a {
+  color: #8899a6;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7	;
+  padding:10px;
+  font-weight: 200;
 }
 
 .user h2 {
@@ -93,7 +115,6 @@
 }
 
 .user-tabs {
-  margin-top: 40px;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
