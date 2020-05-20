@@ -14,7 +14,18 @@
         </div>
 
 
-        <div class="post-likes">
+
+        <div class="post-comments-likes">
+          <%= link_to("/posts/#{post.id}") do %>
+              <i class="fa fa-comment comment-btn"></i>
+          <% end %>
+
+          <% @comments_count = Comment.where(post_id: post.id).count %>
+
+          <div class="comments-count">
+            <%= @comments_count %>
+          </div>
+
           <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
             <%= link_to("/likes/#{post.id}/destroy_index", {method: "post"}) do %>
               <span class="fa fa-heart like-btn-unlike"></span>

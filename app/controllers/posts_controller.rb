@@ -10,6 +10,9 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
     @likes_count = Like.where(post_id: @post.id).count
+    @comments_count = Comment.where(post_id: @post.id).count
+    @comment = Comment.new
+    @comments = Comment.where(post_id: params[:id]).order(created_at: :desc).page(params[:page]).per(3)
   end
 
   def new
@@ -47,8 +50,12 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by(id: params[:id])
     @likes = Like.where(post_id: @post.id)
+    @comments = Comment.where(post_id: @post.id)
     if @likes
       @likes.destroy_all
+    end
+    if @comments
+      @comments.destroy_all
     end
     @post.destroy
     flash[:notice] = "削除しました"

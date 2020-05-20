@@ -12,6 +12,12 @@
         <%= @post.created_at.strftime("%Y-%m-%d %H:%M") %>
       </div>
 
+      <i class="fa fa-comment comment-btn"></i>
+
+      <div class="comments-count">
+        <%= @comments_count %>
+      </div>
+
       <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
         <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
           <span class="fa fa-heart like-btn-unlike"></span>
@@ -33,6 +39,65 @@
         </div>
       <% end %>
     </div>
+
+
+
+
+
+    <div class="form comment-form">
+      <div class="form-body">
+
+        <%= form_tag("/comments/#{params[:id]}/create") do %>
+        <div class="comment-item">
+          <textarea name="content"><%= "@" + @post.user.name + "   " %></textarea>
+          <input type="submit" value="コメントする">
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+
+    <div class="comment-index">
+
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+
+          <div class="form">
+            <div class="form-body">
+
+              <div class="post-left">
+                <img src="<%= "/user_images/#{comment.user.image_name}" %>">
+              </div>
+              <div class="post-right">
+                <div class="comment-user-name">
+                  <%= comment.user.name %>
+                </div>
+                <p><%= comment.content %></p>
+                <div class="post-time">
+                  <%= comment.created_at.strftime("%Y-%m-%d %H:%M") %>
+                </div>
+              </div>
+
+
+              <% if comment.user_id == @current_user.id %>
+                <div class="comment-menus">
+                  <%= link_to("削除","/comments/#{comment.id}/destroy", {method: "post"}) %>
+                </div>
+              <% end %>
+
+            </div>
+          </div>
+
+          <% end %>
+        <% end %>
+
+      </div>
+
+      <%= paginate @comments %>
+
+
+
+
 
     <div class="user return-btn">
       <%= link_to("戻る", "/posts/index") %>

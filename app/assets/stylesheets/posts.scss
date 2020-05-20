@@ -36,7 +36,7 @@
   padding-left: 70px;
 }
 
-.post-likes{
+.post-comments-likes{
   float:right;
 }
 
@@ -111,7 +111,48 @@
   padding-left:5px;
 }
 
+.comments-count{
+  display:inline-block;
+  color:#555555;
+  font-size:20px;
+  line-height: 30px;
+  padding-left:5px;
+  margin-right:5px;
+}
 
+.comment-form{
+  margin-top: 10px;
+}
+
+.comment-index{
+  margin-top: 10px;
+}
+
+.post-comment{
+  display:inline-block;
+}
+
+.comment-btn{
+  color: #3399CC;
+}
+
+.comment-user-name{
+  color:#333333;
+  font-weight: 600;
+}
+
+.comment-menus{
+  float:right;
+}
+
+.comment-menus a{
+  font-size:15px;
+}
+
+.comment-menus a:link, .post-menus a:visited{
+  color:#333333	;
+  cursor: pointer;
+}
 
 /* /posts/new 新規投稿ページ */
 
