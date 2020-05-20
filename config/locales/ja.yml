@@ -6,3 +6,22 @@ ja:
       previous: <i class="fa fa-angle-left"></i>
       next: <i class="fa fa-angle-right"></i>
       truncate: "..."
+
+ja:
+  activerecord:
+    models:
+      post: 投稿
+    attributes:
+      post:
+        content: 投稿内容
+
+ja:
+  activerecord:
+    models:
+      user: ユーザ
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        image_name: 写真
