@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get '/twitter_login' => 'sessions#login_form'
-  get '/auth/:provider/callback', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
-
   post 'likes/:post_id/create' => 'likes#create'
   post 'likes/:post_id/destroy' => 'likes#destroy'
   post 'likes/:post_id/create_index' => 'likes#create_index'
