@@ -4,7 +4,7 @@
     <title>SegatterApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,10 @@
 
       <div class="header-logo">
         <%= link_to("Segatter", "/") %>
+      </div>
+
+      <div class="header-verinfo">
+        <%= link_to("Ver.情報", "/verinfo") %>
       </div>
 
       <div class="header-menus">
