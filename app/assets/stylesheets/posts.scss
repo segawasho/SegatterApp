@@ -109,6 +109,7 @@
   font-size:20px;
   line-height: 30px;
   padding-left:5px;
+  margin-right:5px;
 }
 
 .comments-count{
@@ -136,6 +137,11 @@
   color: #3399CC;
 }
 
+.retweet-btn{
+  color: #339933;
+  font-size:20px;
+}
+
 .comment-user-name{
   color:#333333;
   font-weight: 600;
@@ -160,4 +166,19 @@
   font-size: 20px;
   min-height: 140px;
   border: 1px solid rgb(216, 218, 223);
+}
+
+
+/*引用リツイート*/
+
+/* webkit */
+::-webkit-input-placeholder {
+    color: #555555;
+    opacity:0.4;
+}
+
+/* firefox */
+:-moz-placeholder {
+    color: #555555;
+    opacity:0.4;
 }

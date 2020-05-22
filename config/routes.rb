@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get 'posts/index' => 'posts#index'
   get 'posts/new' => 'posts#new'
+  get 'posts/:id/retweetnew' => 'posts#retweetnew'
   post 'posts/create' => 'posts#create'
   get 'posts/:id' => 'posts#show'
   get 'posts/:id/edit' => 'posts#edit'

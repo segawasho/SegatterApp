@@ -12,7 +12,7 @@
             </div>
           <% end %>
 
-          <textarea name="content" placeholder="最近なにしてる？"></textarea>
+          <textarea name="content">引用:<%= @retweetUser.name %>「<%= @retweet.content %>」>>>&#13;&#13;</textarea>
           <input type="submit" value="投稿">
         </div>
       </div>
