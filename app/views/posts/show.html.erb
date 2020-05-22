@@ -32,6 +32,10 @@
         <%= @likes_count %>
       </div>
 
+      <%= link_to("/posts/#{@post.id}/retweetnew") do %>
+        <i class="fa fa-retweet retweet-btn"></i>
+      <% end %>
+
       <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
           <%= link_to("編集", "/posts/#{@post.id}/edit") %>
@@ -97,10 +101,9 @@
 
 
 
+      <div class="return return-btn">
+        <%= link_to("戻る", "/posts/index") %>
+      </div>
 
-
-    <div class="return return-btn">
-      <%= link_to("戻る", "/posts/index") %>
-    </div>
   </div>
 </div>
