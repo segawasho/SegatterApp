@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##アプリ説明
+コミュニケーションアプリケーションです。
 
-Things you may want to cover:
+##機能
+・新規登録
+・ログイン、ログアウト
+・投稿
+・引用リツイート
+・いいね！
+・コメント
+・プロフィール編集(名前、ID、パスワード、プロフ画像)
 
-* Ruby version
+##環境
 
-* System dependencies
+###バージョン
+Mac OS Catalina 10.15.4
+Ruby 2.6.5p114
+Ruby on Rails 5.2.4.3
+SQLite 3.28.0
+Gem 3.0.3
+Git 2.26.2
+heroku 7.41.1
 
-* Configuration
+###言語
+Ruby
 
-* Database creation
+###フレームワーク
+Ruby on Rails
 
-* Database initialization
+###DB
+開発環境 SQLite
+本番環境 PostgreSQL
 
-* How to run the test suite
+###バージョン管理
+Git
 
-* Services (job queues, cache servers, search engines, etc.)
+###デプロイ
+heroku
 
-* Deployment instructions
-
-* ...
+###Gem
+bcrypt　3.1.11
+pg(プロダクション)
+kaminari　0.17.0
+rails-i18n
