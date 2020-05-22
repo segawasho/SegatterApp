@@ -60,6 +60,11 @@
           <div class="likes-count">
             <%= @likes_count %>
           </div>
+
+          <%= link_to("/posts/#{post.id}/retweetnew") do %>
+            <i class="fa fa-retweet retweet-btn"></i>
+          <% end %>
+
         </div>
 
 
