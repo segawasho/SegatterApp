@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get '/' => 'home#top'
   get 'about' => 'home#about'
   get 'verinfo' => 'home#verinfo'
+  get 'verinfo/readme' => 'home#verinfo_readme'
   get 'verinfo/ver2' => 'home#verinfo_ver2'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
