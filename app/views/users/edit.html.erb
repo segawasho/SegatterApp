@@ -9,9 +9,9 @@
             </div>
           <% end %>
     <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
-          <p>ユーザ名</p>
+          <p>名前</p>
           <input name="name" value="<%= @user.name %>">
-          <p>メールアドレス</p>
+          <p>ユーザID</p>
           <input name="email" value="<%= @user.email %>">
           <p>パスワード</p>
           <input name="password" value="<%= @user.password %>" type="password">
