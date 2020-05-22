@@ -19,6 +19,12 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def retweetnew
+    @post = Post.new
+    @retweet = Post.find_by(id: params[:id])
+    @retweetUser = User.find_by(id: @retweet.user_id)
+  end
+
   def create
     @post = Post.new(
       content: params[:content],
