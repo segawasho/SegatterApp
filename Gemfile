@@ -71,3 +71,5 @@ end
 gem 'kaminari', '~> 0.17.0'
 
 gem 'rails-i18n'
+
+gem 'mysql2'
