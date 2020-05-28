@@ -5,6 +5,7 @@
 ユーザは投稿、いいね、コメントなどでコミュニケーションを図ることができます。
 
 ## URL
+#### AWS EC2
 http://54.168.71.135/
 
 ## 機能
@@ -34,10 +35,10 @@ Ruby
 Ruby on Rails
 
 ### DB
-- <heroku>
+#### heroku
 - 開発環境 SQLite
 - 本番環境 PostgreSQL
-- <AWS>
+#### AWS
 - 全環境 MySQL2
 
 ### バージョン管理
