@@ -26,5 +26,5 @@ test:
 production:
   <<: *default
   database: segatter_production
-  username: segatter_app
-  password: <%= ENV['SEGATTER_DATABASE_PASSWORD'] %>
+  username: root
+  password:
