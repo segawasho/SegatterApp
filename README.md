@@ -29,10 +29,10 @@ http://54.168.71.135/
 - unicorn 4.4.1
 
 ### 言語
-Ruby
+- Ruby
 
 ### フレームワーク
-Ruby on Rails
+- Ruby on Rails
 
 ### DB
 #### heroku
@@ -42,11 +42,11 @@ Ruby on Rails
 - 全環境 MySQL2
 
 ### バージョン管理
-Git
+- Git
 
 ### デプロイ
-heroku
-AWS EC2
+- heroku
+- AWS EC2
 
 ### 主要Gem
 - bcrypt　3.1.11
