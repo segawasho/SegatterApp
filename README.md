@@ -5,7 +5,7 @@
 ユーザは投稿、いいね、コメントなどでコミュニケーションを図ることができます。
 
 ## URL
-https://segatter.herokuapp.com/
+http://54.168.71.135/
 
 ## 機能
 - 新規登録
@@ -22,10 +22,10 @@ https://segatter.herokuapp.com/
 - Mac OS Catalina 10.15.4
 - Ruby 2.6.5p114
 - Ruby on Rails 5.2.4.3
-- SQLite 3.28.0
+- MySQL2 0.4.4
 - Gem 3.0.3
 - Git 2.26.2
-- heroku 7.41.1
+- unicorn 4.4.1
 
 ### 言語
 Ruby
@@ -34,20 +34,23 @@ Ruby
 Ruby on Rails
 
 ### DB
+- <heroku>
 - 開発環境 SQLite
 - 本番環境 PostgreSQL
-
-### ストレージ
-未実装(s3実装予定です)
+- <AWS>
+- 全環境 MySQL2
 
 ### バージョン管理
 Git
 
 ### デプロイ
 heroku
+AWS EC2
 
-### Gem
+### 主要Gem
 - bcrypt　3.1.11
 - pg(プロダクション)
 - kaminari　0.17.0
 - rails-i18n
+- MySQL2
+- unicorn
