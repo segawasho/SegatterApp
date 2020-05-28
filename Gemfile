@@ -64,8 +64,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bcrypt', '~> 3.1.11'
 
-group :production do
-  gem 'mysql2', '~> 0.4.4'
+group :production, :staging do
+    gem 'unicorn', '5.4.1'
+    gem 'mysql2', '~> 0.4.4'
 end
 
 gem 'kaminari', '~> 0.17.0'
