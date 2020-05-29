@@ -15,4 +15,6 @@ $(document).on('turbolinks:load', function() {
     $('.img-modal-wrapper').fadeOut();
   });
 
+  
+
 });

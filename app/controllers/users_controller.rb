@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find_by(id: params[:id])
+      @relationship = Relationship.find_by(user_id: @current_user.id, follow_id: @user.id)
       @posts = Post.where(user_id: params[:id]).order(created_at: :desc).page(params[:page]).per(4)
     end
 
@@ -68,6 +69,8 @@ class UsersController < ApplicationController
       @posts = Post.where(user_id: @user.id)
       @likes = Like.where(user_id: @user.id)
       @comments = Comment.where(user_id: @user.id)
+      @relationships = Relationship.where(user_id: @user.id)
+      @relationships_reverse = Relationship.where(follow_id: @user.id)
       if @likes
         @likes.destroy_all
       end
@@ -77,6 +80,13 @@ class UsersController < ApplicationController
       if @comments
         @comments.destroy_all
       end
+      if @relationships
+        @relationships.destroy_all
+      end
+      if @relationships_reverse
+        @relationships_reverse.destroy_all
+      end
+
       @user.destroy
       flash[:notice] = "ありがとうございました。またいつか使ってください。"
       redirect_to("/")

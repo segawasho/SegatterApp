@@ -1,15 +1,31 @@
+
 <div class="main users-show">
   <div class="container">
     <div class="user">
       <img src="<%= "/user_images/#{@user.image_name}" %>">
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
+
+
       <% if @user.id == @current_user.id %>
         <%= link_to("編集", "/users/#{@user.id}/edit", {class: "user-edit-btn"}) %>
       <% end %>
-        <% if @user.id == @current_user.id %>
-          <%= link_to("アカウント削除", "/users/#{@user.id}/destroy_form") %>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("アカウント削除", "/users/#{@user.id}/destroy_form") %>
+      <% end %>
+
+      <% if @user != @current_user %>
+      <div class="follow-btn-wrapper">
+        <% if @relationship %>
+        <%= link_to("フォロー解除", "/relationships/#{@user.id}/destroy", {method: "post"}) %>
+        <% else %>
+        <%= link_to("フォロー", "/relationships/#{@user.id}/create", {method: "post"}) %>
         <% end %>
+      </div>
+      <% end %>
+
+
+
     </div>
 
 
