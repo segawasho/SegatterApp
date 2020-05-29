@@ -46,7 +46,7 @@
 
 ### 主要Gem
 - bcrypt　3.1.11
-- pg(プロダクション)
+- jquery-rails
 - kaminari　0.17.0
 - rails-i18n
 - MySQL2
