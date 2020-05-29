@@ -32,6 +32,11 @@
             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
           </div>
           <%= link_to(post.content, "/posts/#{post.id}") %>
+          <% if post.image_name  %>
+            <div>
+              <img src="<%= "/post_images/#{post.image_name}" %>" class="post-img">
+            </div>
+          <% end %>
         </div>
 
         <div class="post-comments-likes">

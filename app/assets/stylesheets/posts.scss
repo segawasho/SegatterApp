@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* 共通レイアウト */
+.post-link{
+  padding:10px;
+}
 
 
 
@@ -40,6 +43,12 @@
   float:right;
 }
 
+.post-img{
+  height:100px;
+  margin-bottom:10px;
+  cursor:pointer;
+}
+
 
 /* posts#show 投稿詳細ページ */
 
@@ -75,7 +84,7 @@
   cursor: pointer;
 }
 
-.posts-show-item img {
+.post-user-img {
   width: 60px;
   height: 60px;
   border-radius: 50%;

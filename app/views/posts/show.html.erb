@@ -1,13 +1,35 @@
+<div class="img-modal-wrapper">
+  <div class="modal">
+    <div class="close-modal">
+      <i class="fa fa-remove" aria-hidden="true"></i>
+    </div>
+    <div>
+      <img src="<%= "/post_images/#{@post.image_name}" %>" class="post-img-modal">
+    </div>
+  </div>
+</div>
+
+
 <div class="main posts-show">
   <div class="container">
+
+
+
+
+
     <div class="posts-show-item">
       <div class="post-user-name">
-        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <img src="<%= "/user_images/#{@user.image_name}" %>" class="post-user-img">
         <%= link_to(@user.name, "/users/#{@user.id}") %>
       </div>
       <p>
         <%= @post.content %>
       </p>
+      <% if @post.image_name  %>
+        <div>
+          <img src="<%= "/post_images/#{@post.image_name}" %>" class="post-img">
+        </div>
+      <% end %>
       <div class="post-time">
         <%= @post.created_at.strftime("%Y-%m-%d %H:%M") %>
       </div>

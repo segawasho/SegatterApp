@@ -5,6 +5,14 @@ $(document).on('turbolinks:load', function() {
   $('#about-main-message').fadeIn(1000);
   $('#verinfo2').slideDown(1000);
   $('#verinfo_readme').slideDown(1000);
-  setTimeout("$('.time-limit').fadeOut('slow')", 1200) 
+  setTimeout("$('.time-limit').fadeOut('slow')", 1200)
+
+  $('.post-img').click(
+  function(){
+    $('.img-modal-wrapper').fadeIn();
+  });
+  $('.close-modal').click(function(){
+    $('.img-modal-wrapper').fadeOut();
+  });
 
 });

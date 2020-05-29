@@ -1,18 +1,28 @@
 <div class="main posts-index">
   <div class="container">
+
     <% @posts.each do |post| %>
       <div class="posts-index-item">
 
         <div class="post-left">
           <img src="<%= "/user_images/#{post.user.image_name}" %>">
         </div>
+
         <div class="post-right">
           <div class="post-user-name">
             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
           </div>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
+          <%= link_to("/posts/#{post.id}") do %>
+            <div class="post-link">
+              <%= post.content %>
+              <% if post.image_name  %>
+                <div>
+                  <img src="<%= "/post_images/#{post.image_name}" %>" class="post-img">
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
-
 
 
         <div class="post-comments-likes">
@@ -46,10 +56,6 @@
             <i class="fa fa-retweet retweet-btn"></i>
           <% end %>
         </div>
-
-
-
-
       </div>
     <% end %>
     <%= paginate @posts %>
