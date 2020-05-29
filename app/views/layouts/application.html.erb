@@ -20,10 +20,6 @@
         <%= link_to("Segatter", "/") %>
       </div>
 
-      <div class="header-verinfo">
-        <%= link_to("Ver.情報", "/verinfo") %>
-      </div>
-
       <div class="header-menus">
 
         <div id="header-list">
@@ -48,6 +44,10 @@
               </li>
 
               <li>
+                <%= link_to("Ver.情報", "/verinfo") %>
+              </li>
+
+              <li>
                 <%= link_to("ログアウト", "/logout", {method: "post"}) %>
               </li>
 
@@ -55,6 +55,10 @@
 
               <li>
                 <%= link_to("Segatterとは", "/about") %>
+              </li>
+
+              <li>
+                <%= link_to("Ver.情報", "/verinfo") %>
               </li>
 
 
@@ -99,6 +103,10 @@
                   </li>
 
                   <li>
+                    <%= link_to("Ver.情報", "/verinfo") %>
+                  </li>
+
+                  <li>
                     <%= link_to("ログアウト", "/logout", {method: "post"}) %>
                   </li>
 
@@ -108,6 +116,9 @@
                     <%= link_to("Segatterとは", "/about") %>
                   </li>
 
+                  <li>
+                    <%= link_to("Ver.情報", "/verinfo") %>
+                  </li>
 
                   <li>
                     <%= link_to("新規登録", "/signup") %>
@@ -131,7 +142,7 @@
     </header>
 
       <% if flash[:notice] %>
-        <div class="flash">
+        <div class="flash time-limit">
           <%= flash[:notice] %>
         </div>
       <% end %>
