@@ -11,6 +11,9 @@ class HomeController < ApplicationController
   def verinfo_ver2
   end
 
+  def verinfo_ver3
+  end
+
   def verinfo_readme
   end
 end
