@@ -68,7 +68,7 @@ group :production do
   gem 'mysql2', '~> 0.4.4'
 end
 
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 
 gem 'rails-i18n'
 
