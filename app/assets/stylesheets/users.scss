@@ -154,6 +154,88 @@
   color: #afb6bf;
 }
 
+/*modal*/
+.follow-modal-wrapper{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  overflow: scroll;
+}
+
+.follower-modal-wrapper{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  overflow: scroll;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.close-modal{
+  float:right;
+  font-size:30px;
+  color:white;
+}
+
+.follow-modal{
+  margin-top:100px;
+}
+
+.not-follow-text{
+  color: #555555;
+}
+
+.follow-btns{
+  padding:20px;
+}
+
+#follow_btn{
+  cursor:pointer;
+  display:inline-block;
+  background-color:rgba(0,128,0,0.3);
+  border: 1px solid #BBBBBB;
+  padding:5px;
+  border-radius: 30px;
+}
+
+#follower_btn{
+  cursor:pointer;
+  display:inline-block;
+  background-color:rgba(0,128,0,0.3);
+  border: 1px solid #BBBBBB;
+  padding:5px;
+  border-radius: 30px;
+}
+
+.follow-b a{
+  cursor:pointer;
+  display:inline-block;
+  background-color:rgba(0,128,0,0.5);
+  border: 1px solid #BBBBBB;
+  padding:10px;
+  font-size:20px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+
 /*destroy_form アカウント削除確認ページ*/
 .destroy-confirm{
   font-size:25px;

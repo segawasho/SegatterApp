@@ -11,11 +11,19 @@ class UsersController < ApplicationController
     def show
       @user = User.find_by(id: params[:id])
       @relationship = Relationship.find_by(user_id: @current_user.id, follow_id: @user.id)
+      @relationship_follows = Relationship.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
+      @relationship_followers = Relationship.where(follow_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
+      @relationship_follows_count = Relationship.where(user_id: @user.id).count
+      @relationship_followers_count = Relationship.where(follow_id: @user.id).count
       @posts = Post.where(user_id: params[:id]).order(created_at: :desc).page(params[:page]).per(4)
     end
 
     def likes
       @user = User.find_by(id: params[:id])
+      @relationship_follows = Relationship.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
+      @relationship_followers = Relationship.where(follow_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
+      @relationship_follows_count = Relationship.where(user_id: @user.id).count
+      @relationship_followers_count = Relationship.where(follow_id: @user.id).count
       @likes = Like.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(4)
     end
 
@@ -69,8 +77,8 @@ class UsersController < ApplicationController
       @posts = Post.where(user_id: @user.id)
       @likes = Like.where(user_id: @user.id)
       @comments = Comment.where(user_id: @user.id)
-      @relationships = Relationship.where(user_id: @user.id)
-      @relationships_reverse = Relationship.where(follow_id: @user.id)
+      @relationship_follows = Relationship.where(user_id: @user.id)
+      @relationship_followers = Relationship.where(follow_id: @user.id)
       if @likes
         @likes.destroy_all
       end
@@ -80,11 +88,11 @@ class UsersController < ApplicationController
       if @comments
         @comments.destroy_all
       end
-      if @relationships
-        @relationships.destroy_all
+      if @relationship_follows
+        @relationship_follows.destroy_all
       end
-      if @relationships_reverse
-        @relationships_reverse.destroy_all
+      if @relationship_followers
+        @relationship_followers.destroy_all
       end
 
       @user.destroy

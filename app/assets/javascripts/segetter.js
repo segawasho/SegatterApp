@@ -13,8 +13,18 @@ $(document).on('turbolinks:load', function() {
   });
   $('.close-modal').click(function(){
     $('.img-modal-wrapper').fadeOut();
+    $('.follow-modal-wrapper').fadeOut();
+    $('.follower-modal-wrapper').fadeOut();
   });
+  $('#follow_btn').click(
+    function(){
+      $('.follow-modal-wrapper').fadeIn();
+    });
+  $('#follower_btn').click(
+    function(){
+      $('.follower-modal-wrapper').fadeIn();
+    });
 
-  
+
 
 });
