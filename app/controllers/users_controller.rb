@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
     def likes
       @user = User.find_by(id: params[:id])
+      @relationship = Relationship.find_by(user_id: @current_user.id, follow_id: @user.id)
       @relationship_follows = Relationship.where(user_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
       @relationship_followers = Relationship.where(follow_id: @user.id).order(created_at: :desc).page(params[:page]).per(7)
       @relationship_follows_count = Relationship.where(user_id: @user.id).count
