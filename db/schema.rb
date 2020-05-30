@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 2020_05_29_150625) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "content"
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.text "content", collation: "utf8_general_ci"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.string "image_name"
+    t.string "image_name", collation: "utf8_general_ci"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -47,13 +47,13 @@ ActiveRecord::Schema.define(version: 2020_05_29_150625) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", collation: "utf8_general_ci"
+    t.string "email", collation: "utf8_general_ci"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_name"
-    t.string "password_digest"
+    t.string "image_name", collation: "utf8_general_ci"
+    t.string "password_digest", collation: "utf8_general_ci"
   end
 
 end
