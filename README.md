@@ -1,7 +1,7 @@
 # README
 
 ## URL
-http://segatter.com/  
+http://segatter.com/    
 もし上記URLで開けなかった場合下記で開いていただければと思います。  
 http://18.176.31.104/
 
