@@ -104,6 +104,9 @@ class UsersController < ApplicationController
     def login_form
     end
 
+    def login_gest
+    end
+
     def login
       @user = User.find_by(email: params[:email])
       if @user && @user.authenticate(params[:password])

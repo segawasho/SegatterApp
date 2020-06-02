@@ -2,7 +2,11 @@
 
 ## URL
 http://segatter.com/  
-  
+
+下記ID・PASSWORDでログインしていただければ幸いです。  
+ID: jinji  
+PASS: jinji  
+
 もし上記URLで開けなかった場合、恐れ入りますが下記で開いていただければと思います。  
 http://18.176.31.104/
 
